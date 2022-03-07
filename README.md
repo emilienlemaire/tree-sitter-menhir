@@ -1,9 +1,23 @@
 # tree-sitter-menhir
 
-[![Build Status](https://travis-ci.org/Kerl13/tree-sitter-menhir.svg?branch=master)](https://travis-ci.org/Kerl13/tree-sitter-menhir)
+[Menhir](http://gallium.inria.fr/~fpottier/menhir/) grammar for [tree-sitter](https://github.com/tree-sitter/tree-sitter)
 
-[Menhir](http://gallium.inria.fr/~fpottier/menhir/) grammar for
-[tree-sitter](https://github.com/tree-sitter/tree-sitter)
+# Add to neovim
+
+Install with your favorite plugin manager and copy this code in your `tree-sitter` config file:
+```lua
+local parser_configs = require('nvim-treesitter.parsers').get_parser_configs()
+
+parser_configs.menhir = {
+  install_info = {
+    url = "https://github.com/emilienlemaire/tree-sitter-menhir",
+    files = { "src/parser.c", "src/scanner.cc" },
+  },
+  filetype = "menhir",
+}
+```
+
+Then run `:TSInstall menhir`.
 
 ## References
 
