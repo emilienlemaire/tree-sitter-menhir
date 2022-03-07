@@ -1,1 +1,2 @@
-(ocaml @ocaml)
+(ocaml) @ocaml
+(ocaml_type) @ocaml
